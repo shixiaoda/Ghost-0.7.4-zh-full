@@ -99,6 +99,37 @@ input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; }
 table { border-collapse: collapse; border-spacing: 0; }
 
+.navigation__item {
+    display: inline-block;
+    margin: 5px 10px 0 0;
+    line-height: 1em; 
+}
+.navigation__item a {
+    color: rgb(222,222,222);
+    display: block;
+    position: relative;
+    border-color: #FFF;
+    opacity: .8; 
+    width: 20px;
+    height: 20px;
+}
+.navigation__item a:hover {
+    color: #800000;
+    border-color: #FFF;
+    opacity: 1; 
+}
+
+.navigation--social a {
+    border: 0px;
+    padding: 6px 8px 6px 9px; 
+}
+.navigation__item a .label {
+    display: none; 
+}
+.navigation__item a .icon {
+    display: block;
+    font-size: 1.7em; 
+}
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
@@ -185,7 +216,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Helvetica Neue","Helvetica","Lucida Grande","Arial","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei","sans-serif";
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
     line-height: 1.75em;
@@ -278,7 +309,7 @@ dl dt {
     text-align: right;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-weight: normal;
+    font-weight: 700;
     margin-bottom: 1em;
 }
 
@@ -367,6 +398,10 @@ pre code, pre tt {
     background: transparent;
     border: none;
     padding: 0;
+}
+
+code {
+   word-wrap: normal;
 }
 
 kbd {
@@ -523,7 +558,7 @@ body.nav-opened .site-wrapper {
 
 .main-nav a {
     text-decoration: none;
-    font-family: inherit;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Navigation */
@@ -576,7 +611,7 @@ body.nav-opened .nav {
     top: 45px;
     left: 30px;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 100;
     text-transform: uppercase;
     color: #fff;
 }
@@ -698,7 +733,7 @@ body.nav-opened .nav {
     color: #111 !important; /* Overides `.nav a:link, .nav a:visited` colour */
     text-align: center;
     font-size: 12px;
-    font-family: inherit;
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     line-height: 35px;
@@ -802,7 +837,7 @@ body.nav-opened .nav {
 }
 .menu-button:before {
     font-size: 12px;
-    font-weight: normal;
+    font-weight: bold;
     margin-right: 6px;
     position: relative;
     top: 1px;
@@ -867,16 +902,17 @@ body.nav-opened .nav {
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
     margin: 10px 0 10px 0;
-    font-size: 5rem;
+    font-size: 9rem;
     letter-spacing: -1px;
     font-weight: 700;
-    font-family: inherit;
-    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.9);
 }
 
 .page-description {
     margin: 0;
-    font-size: 2rem;
+    font-size: 4rem;
     line-height: 1.5em;
     font-weight: 400;
     letter-spacing: 0.01rem;
@@ -909,6 +945,13 @@ body.nav-opened .nav {
     animation: fade-in-down 0.9s;
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
+}
+
+.page-social {
+    -webkit-animation: fade-in-down 0.9s;
+    animation: fade-in-down 0.9s;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -960,7 +1003,7 @@ body:not(.post-template) .post-title {
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
-    font-family: inherit;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
@@ -1297,7 +1340,7 @@ body:not(.post-template) .post-title {
 .author-bio {
     font-size: 1.8rem;
     line-height: 1.5em;
-    font-weight: normal;
+    font-weight: 200;
     color: #50585D;
     letter-spacing: 0;
     text-indent: 0;
@@ -1394,7 +1437,7 @@ body:not(.post-template) .post-title {
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: inherit;
+    font-family: "Open Sans", sans-serif;
     color: rgba(255,255,255,0.8);
     border: rgba(255,255,255,0.5) 1px solid;
     border-radius: 4px;
@@ -1439,9 +1482,6 @@ body:not(.post-template) .post-title {
 /* if there are two posts without covers, put a border between them */
 .read-next-story.no-cover + .read-next-story.no-cover {
     border-left: rgba(0,0,100,0.04) 1px solid;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 /* Correctly position site-footer when next to the .read-next container */
@@ -1485,7 +1525,7 @@ body:not(.post-template) .post-title {
     width: 80%;
     max-width: 710px;
     margin: 4rem auto;
-    font-family: inherit;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -1569,7 +1609,7 @@ body:not(.post-template) .post-title {
     position: relative;
     margin: 8rem 0 0 0;
     padding: 1rem 15px;
-    font-family: inherit;
+    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;
