@@ -11,7 +11,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: '54.255.170.97',
+        url: 'http://shixiaoda.me',//'http://54.255.170.97',
         mail: {},
         // database: {
         //     client: 'sqlite3',
@@ -25,10 +25,10 @@ config = {
         database: {
             client: 'mysql',
             connection: {
-                host     : 'mysql.celbwsbr6lqt.ap-southeast-1.rds.amazonaws.com',
-                user     : '',
-                password : '',
-                database : 'mysql',
+                host     : 'mysql.celbwsbr6lqt.ap-southeast-1.rds.amazonaws.com',//aws RDS控制台可以查到
+                user     : '',//数据库 用户名
+                password : '',//数据库密码
+                database : 'mysql',//数据库标示
                 charset  : 'utf8'
             },
             debug: false
